@@ -7,8 +7,8 @@
  * @package    Nette\Test
  */
 
-require __DIR__ . '/NetteTest/TestHelpers.php';
-require __DIR__ . '/NetteTest/Assert.php';
+include_once 'PHPUnit/Framework.php';
+require __DIR__ . '/TestCase.php';
 require __DIR__ . '/../Nette/loader.php';
 
 // configure environment
@@ -23,9 +23,4 @@ $_ENV = array();
 
 if (PHP_SAPI !== 'cli') {
 	header('Content-Type: text/plain; charset=utf-8');
-}
-
-if (extension_loaded('xdebug')) {
-	xdebug_disable();
-	TestHelpers::startCodeCoverage(__DIR__ . '/coverage.dat');
 }

@@ -1,0 +1,2 @@
+<phpunit bootstrap="initialize.php" colors="true">
+</phpunit>
